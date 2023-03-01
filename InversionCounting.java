@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class InversionCounting {
-    
     public static long mergeAndCount(int[] arr, int left, int mid, int right) {
         int[] leftArr = new int[mid - left + 1];
         int[] rightArr = new int[right - mid];
