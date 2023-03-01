@@ -1,19 +1,18 @@
 import java.util.Scanner;
 
 public class InversionCounting {
-    // This method takes in an array and indices of the first, middle, and last elements of the array.
-    // It merges the two subarrays and returns the number of inversions.
+    // This method takes in an array and indices of the first, middle, and last elements of the array
+    // and merges the two subarrays and returns the number of inversions.
     public static long mergeAndCount(int[] arr, int left, int mid, int right) {
         // Create two subarrays from the given array
         int[] leftArr = new int[mid - left + 1];
         int[] rightArr = new int[right - mid];
         long count = 0;
-        
+
         // Copy elements from the given array into the subarrays
         for (int x = 0; x < leftArr.length; x++) {
             leftArr[x] = arr[left + x];
         }
-
         for (int x = 0; x < rightArr.length; x++) {
             rightArr[x] = arr[mid + 1 + x];
         }
@@ -45,8 +44,8 @@ public class InversionCounting {
         return count;
     }
 
-    // This method takes in an array and indices of the first and last elements of the array.
-    // It recursively sorts the array and counts the number of inversions.
+    // This method takes in an array and indices of the first and last elements of the array 
+    // and recursively sorts the array and counts the number of inversions.
     public static long mergeSortAndCount(int[] arr, int left, int right) {
         long count = 0;
 
